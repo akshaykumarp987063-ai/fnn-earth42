@@ -1,6 +1,22 @@
-
 # Node dependencies
 **/node_modules/
 
 # TypeScript build output
 **/dist/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Backend generated files
+backend/dist/
+backend/node_modules/
+backend/.env
