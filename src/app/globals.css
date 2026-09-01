@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-midnight: #0b0f19;
+  --color-slate-panel: #121826;
+  --color-crimson: #e23636;
+  --color-mesh: #1c2740;
+  --color-background: #0b0f19;
+  --color-foreground: #f4f7fb;
+  --font-sans: var(--font-outfit);
+  --font-mono: var(--font-jetbrains);
+}
+
+:root {
+  --background: #0b0f19;
+  --foreground: #f4f7fb;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #e2363666 transparent;
+}
+
+html,
+body {
+  min-height: 100%;
+  background: #05070d;
+  color: var(--foreground);
+}
+
+body {
+  font-family: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+}
+
+.mesh-grid {
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(226, 54, 54, 0.18), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 100%, rgba(56, 189, 248, 0.08), transparent 50%),
+    linear-gradient(rgba(28, 39, 64, 0.55) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(28, 39, 64, 0.55) 1px, transparent 1px);
+  background-size: auto, auto, 28px 28px, 28px 28px;
+}
+
+.glow-ring {
+  box-shadow:
+    0 0 0 1px rgba(226, 54, 54, 0.35),
+    0 0 24px rgba(226, 54, 54, 0.25);
+}
+
+.panel {
+  background: linear-gradient(180deg, rgba(18, 24, 38, 0.92), rgba(11, 15, 25, 0.88));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
