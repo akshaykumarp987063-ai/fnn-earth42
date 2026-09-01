@@ -1,0 +1,42 @@
+{
+  "campus": "VIT Chennai",
+  "city": "Chennai",
+  "country": "India",
+  "locations": [
+    {
+      "id": "LOC-001",
+      "name": "Main Gate",
+      "type": "GATE"
+    },
+    {
+      "id": "LOC-002",
+      "name": "Academic Block",
+      "type": "ACADEMIC"
+    },
+    {
+      "id": "LOC-003",
+      "name": "Library",
+      "type": "ACADEMIC"
+    },
+    {
+      "id": "LOC-004",
+      "name": "Hostel Area",
+      "type": "HOSTEL"
+    },
+    {
+      "id": "LOC-005",
+      "name": "Food Court",
+      "type": "FOOD"
+    },
+    {
+      "id": "LOC-006",
+      "name": "Sports Ground",
+      "type": "SPORTS"
+    },
+    {
+      "id": "LOC-007",
+      "name": "Medical Centre",
+      "type": "MEDICAL"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+import { checkDuplicate } from "../classifier/duplicateDetector";
+
+const existingIncidents = [
+  {
+    id: "INC-001",
+    description: "Fire near the hostel",
+    latitude: 12.8406,
+    longitude: 80.1534,
+    createdAt: Date.now(),
+  },
+];
+
+console.log("TEST 1 — Duplicate nearby report");
+
+const duplicate = checkDuplicate(
+  "There is a fire near the hostel",
+  12.8407,
+  80.1535,
+  existingIncidents
+);
+
+console.log(duplicate);
+
+if (!duplicate.isDuplicate) {
+  throw new Error("Duplicate incident was not detected");
+}
+
+console.log("PASS");
+
+
+console.log("\nTEST 2 — Different incident");
+
+const different = checkDuplicate(
+  "Broken water pipe near academic block",
+  12.8407,
+  80.1535,
+  existingIncidents
+);
+
+console.log(different);
+
+if (different.isDuplicate) {
+  throw new Error("Different incident incorrectly marked duplicate");
+}
+
+console.log("PASS");
+
+
+console.log("\nTEST 3 — Same description but far away");
+
+const farAway = checkDuplicate(
+  "Fire near the hostel",
+  12.8500,
+  80.1600,
+  existingIncidents
+);
+
+console.log(farAway);
+
+if (farAway.isDuplicate) {
+  throw new Error("Far-away incident incorrectly marked duplicate");
+}
+
+console.log("PASS");
+
+console.log("\nALL DUPLICATE DETECTOR TESTS PASSED");
